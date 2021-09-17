@@ -21,7 +21,8 @@ module.exports = {
     getAll(req, res) {
         console.log("getAll method executed");
 
-        Author.find()
+        // Author.find()
+        Author.find().sort({name:1})
         .then((author) => {
             res.json(author);
         })

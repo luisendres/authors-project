@@ -15,7 +15,8 @@ const Authors = (props) => {
         axios
             .get("http://localhost:8000/api")
             .then((res) => {
-                setAuthors(res.data.sort((a,b)=>a.name.localeCompare(b.name)));
+                // setAuthors(res.data.sort((a,b)=>a.name.localeCompare(b.name)));
+                setAuthors(res.data);
             })
             .catch((err) => {
                 console.log(err);
